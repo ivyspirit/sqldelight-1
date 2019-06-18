@@ -22,6 +22,7 @@ import com.alecstrong.sqlite.psi.core.psi.SqliteUpdateStmtLimited
 import com.intellij.psi.PsiElement
 import com.squareup.sqldelight.core.lang.psi.StmtIdentifierMixin
 import com.squareup.sqldelight.core.lang.util.referencedTables
+import com.squareup.sqldelight.core.lang.util.sqFile
 
 sealed class NamedMutator(
   statement: PsiElement,

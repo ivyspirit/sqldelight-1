@@ -36,7 +36,7 @@ abstract class BindableQuery(
   internal val identifier: PsiElement?,
   internal val statement: PsiElement
 ) {
-  val id = currentId++
+  abstract val id: Int
 
   private val javadoc: PsiElement? = identifier?.childOfType(SqliteTypes.JAVADOC)
 

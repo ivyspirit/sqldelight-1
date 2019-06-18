@@ -168,5 +168,8 @@ data class NamedQuery(
     is SqliteExpr -> name
     else -> throw IllegalStateException("Cannot get name for type ${this.javaClass}")
   }
+
+  override val id: Int
+    get() = statement.sqFile().let { "${it.packageName}:${it.name}:${name}".hashCode() }
 }
 
